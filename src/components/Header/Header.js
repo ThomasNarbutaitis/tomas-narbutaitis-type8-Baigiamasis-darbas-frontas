@@ -28,7 +28,7 @@ function Header() {
               </NavLink>
             )}
 
-            <NavLink className={css.link} to='/'>
+            <NavLink className={css.link} exact to='/'>
               Home
             </NavLink>
 

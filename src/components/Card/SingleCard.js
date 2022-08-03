@@ -25,13 +25,15 @@ function SingleCard({
           </p>
           <p className={css.descr}>
             <strong>Created:</strong>{' '}
-            {`${new Date(created || created_at).toUTCString()}`}
+            {`${new Date(created || created_at).toUTCString().slice(0, 26)}`}
           </p>
 
           {isUserLoggedIn && (
             <p className={css.descr}>
               <strong>Last modified:</strong>{' '}
-              {`${new Date(modified || modified_at).toUTCString()}`}
+              {`${new Date(modified || modified_at)
+                .toUTCString()
+                .slice(0, 26)}`}
             </p>
           )}
         </div>
